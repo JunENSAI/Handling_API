@@ -1,0 +1,10 @@
+requests
+fastapi
+uvicorn
+pydantic
+sqlalchemy
+pytest
+django
+djangorestframework
+passlib
+httpx
