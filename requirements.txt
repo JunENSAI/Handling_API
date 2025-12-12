@@ -11,3 +11,4 @@ passlib
 httpx
 google-genai
 google-generativeai
+zeep
