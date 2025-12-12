@@ -1,7 +1,6 @@
 import os
 import sys
 from dotenv import load_dotenv
-from google import genai
 import google.generativeai as genai
 
 # 1. Load Environment Variables
@@ -14,10 +13,16 @@ if not api_key:
     print("Error: GOOGLE_API_KEY not found in .env file.")
     sys.exit(1)
 
+try:
+    genai.configure(api_key=api_key)
+except Exception as e:
+    print(f"Configuration error: {e}", file=sys.stderr)
+
 def run_gemini_example():
     print("--- Connecting to Google Gemini API ---")
     
     try:
+
 
         model = genai.GenerativeModel('gemini-2.5-flash')
         prompt = "What is API?"
