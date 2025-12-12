@@ -9,3 +9,5 @@ django
 djangorestframework
 passlib
 httpx
+google-genai
+google-generativeai
