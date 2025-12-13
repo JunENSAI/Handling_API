@@ -208,3 +208,4 @@ __marimo__/
 
 api_env/
 *.json
+*.db

@@ -13,3 +13,4 @@ google-genai
 google-generativeai
 zeep
 asyncio
+sqlmodel
