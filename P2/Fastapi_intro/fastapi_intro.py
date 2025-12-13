@@ -11,8 +11,6 @@ def read_root():
     return {"message": "Hello World", "framework": "FastAPI"}
 
 # 3. Path Parameters
-# We can capture values from the URL using {variable_name}
-# We use type hints (item_id: int) to enforce validation
 @app.get("/items/{item_id}")
 def read_item(item_id: int):
     return {"item_id": item_id, "is_even": item_id % 2 == 0}
