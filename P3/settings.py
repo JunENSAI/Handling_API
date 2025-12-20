@@ -133,3 +133,17 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 # Optional: Allow cookies/auth headers to be sent
 CORS_ALLOW_CREDENTIALS = True
+
+#control the traffic
+
+REST_FRAMEWORK = {
+    'DEFAULT_THROTTLE_CLASSES': [
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle'
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '5/minute',
+        'user': '100/day',
+        'heavy_view': '3/minute'
+    }
+}
